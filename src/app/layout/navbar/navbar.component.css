@@ -1,0 +1,13 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+ li a:hover{
+   display: block;
+   background: rgb(237, 228, 228);
+   border-radius: 6px;
+   color: black !important;
+   font-weight: 500;
+   font-family: 'Roboto', sans-serif;
+   font-size: 15px;
+   transition: all 300ms ease 15ms;
+ }

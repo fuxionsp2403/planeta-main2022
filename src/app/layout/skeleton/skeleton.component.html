@@ -1,0 +1,88 @@
+<div id="particleWrapper">
+  <!-- INICIOA DE LAS PARTICULAS -->
+  <ng-particles
+    [id]="id"
+    [options]="particlesOptions"
+    [particlesInit]="particlesInit"
+    (particlesLoaded)="particlesLoaded($event)"
+  >
+  </ng-particles>
+  <!-- INICIO DEL NAVBAR -->
+  <app-navbar></app-navbar>
+  <!-- INICIO DEL MAIN CONTAINER -->
+  <div class="main">
+    <div class="container mt-5">
+      <div id="carouselExampleCaptions" class="carousel slide p-3 shadow rounded" data-bs-ride="carousel"
+      style="background-color: #1c305c;opacity: 0.9;">
+       <!-- style="background-color: RGB(28, 48, 92,0.9);"> -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" >
+          <div class="carousel-item active">
+            <div class="row row-cols-md-3 g-4">
+              <div class="col-md-4">
+                <app-cards [valor]="0"></app-cards> 
+              </div>
+              <div class="col-md-4">
+                <app-cards [valor]="1"></app-cards>
+              </div>
+              <div class="col-md-4">
+                <app-cards [valor]="2"></app-cards>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row row-cols-md-3 g-4">
+              <app-cards [valor]="3"></app-cards>
+              <div class="col-md-4">
+                <app-cards [valor]="4"></app-cards>
+              </div>
+              <div class="col-md-4">
+                <app-cards [valor]="5"></app-cards>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row row-cols-md-3 g-4">
+              <div class="col-md-4">
+                <app-cards [valor]="6"></app-cards>
+              </div>
+              <div class="col-md-4">
+                <app-cards [valor]="7"></app-cards>
+              </div>
+              <div class="col-md-4">
+                <app-cards [valor]="8"></app-cards>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div  class="p-3 shadow rounded"  style="background-color: #1c305c; margin-top: 70px;">
+        <app-boxcontainer></app-boxcontainer>
+      </div>
+    </div>
+
+     <!-- INICIO DEL FOOTER -->
+  <div class="footer mt-5">
+    <app-footer></app-footer>
+  </div>
+  </div>
+
+
+
+</div>
+

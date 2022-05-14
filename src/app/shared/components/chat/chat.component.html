@@ -1,0 +1,31 @@
+<div class="container btn-flotante d-flex justify-content-center" id="div">
+  <div class="card mt-5">
+    <div class="d-flex flex-row justify-content-between p-3 adiv text-white">
+      <span class="pb-3">Chat Boot</span>
+      <div class="buttons">
+        <i class="fa fa-minus" routerLink="/chat/3" aria-hidden="true"></i>
+        <i class="fa fa-window-maximize" routerLink="/chat/4" aria-hidden="true"></i>
+        <a routerLink="/chat/2"><i class="fa fa-times"></i></a>
+      </div>
+    </div>
+    <div class="box-chat" id="boxchat">
+      <div class="container-chat" #scrollchat [scrollTop]="scrollchat.scrollHeight"  (scroll)="onScroll()">
+        <div class="d-flex flex-row p-3" *ngFor="let item of dtChat">
+         <img *ngIf="item.type === 1" src="{{ item.avatar }}" width="30" height="30">
+         <div [ngClass]="item.type === 1 ? 'chat ml-2 p-3' : 'bg-white mr-2 p-3'">{{ item.message }}</div>
+         <img *ngIf="item.type === 2" src="{{ item.avatar }}" width="30" height="30">
+       </div>
+     </div>
+ 
+
+      <!--  <div class="d-flex flex-row p-3">
+         <div class="bg-white mr-2 p-3"><span class="text-muted">Hello and thankyou for visiting birdlynind.</span></div>
+         <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png" width="30" height="30">
+       </div> -->
+
+       <div class="form-group px-3">
+         <textarea class="form-control"(keyup.enter)="emitermessage()" #txtmessage rows="5" placeholder="Type your message"></textarea>
+       </div>
+    </div>
+  </div>
+</div>

@@ -5,3 +5,13 @@
 body{
   background: #000000;
 }
+
+.rounded-max{
+  border-radius:20px !important;
+}
+.text1{
+  font-size:15px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: justify;
+}

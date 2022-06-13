@@ -1,10 +1,10 @@
 #particleWrapper {
   -position: relative;
-  width: 100%; /* puedes cambiar este valor por lo que desea en px */
- -height: 130vh; /* puedes cambiar este valor por lo que desea en px */
+  width: 100px; /* puedes cambiar este valor por lo que desea en px */
+ -height: 130px; /* puedes cambiar este valor por lo que desea en px */
 }
 .carousel-inner{
-  margin-left: 17px !important;
+  margin-left: 10px !important;
 }
 .footer{
   background: #1e1e26 !important;

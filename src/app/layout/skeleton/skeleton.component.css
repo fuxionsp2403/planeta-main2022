@@ -1,7 +1,7 @@
 #particleWrapper {
   -position: relative;
-  width: 100px; /* puedes cambiar este valor por lo que desea en px */
- -height: 130px; /* puedes cambiar este valor por lo que desea en px */
+  width: 100%; /* puedes cambiar este valor por lo que desea en px */
+ -height: 130vh; /* puedes cambiar este valor por lo que desea en px */
 }
 .carousel-inner{
   margin-left: 10px !important;

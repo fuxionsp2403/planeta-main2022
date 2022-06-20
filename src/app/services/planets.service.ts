@@ -6,20 +6,20 @@ import { AppSettings } from "./AppSettings";
 import { Observable } from 'rxjs';
 
 
-const baseUrlAuth = AppSettings.API_ENDPOINT + 'planets';
+const baseUrlAuth = AppSettings.API_ENDPOINT + '/planets';
 @Injectable({
   providedIn: 'root'
 })
-export class ProyectoService {
+export class PlanetsService {
    constructor(private http:HttpClient) {
     }
 
     getAllPlanets(p: Planets):Observable<any>{
-        return this.http.get<Planets[]>(baseUrlAuth+"/");
+        return this.http.get<Planets[]>(baseUrlAuth);
     }
 
     getPlanetForName(name: string): Observable<any>{
-        return this.http.get<Planets[]>(baseUrlAuth+"planet/"+name)
+        return this.http.get<Planets[]>(baseUrlAuth+'/'+name)
     }
 
 }

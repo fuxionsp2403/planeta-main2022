@@ -11,7 +11,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Planets } from 'app/models/planets.model';
+import { Planets, Saturn } from 'app/models/planets.model';
 import { PlanetsService } from 'app/services/planets.service';
 
 interface Chat {
@@ -44,6 +44,11 @@ export class ChatComponent implements OnInit, AfterViewChecked {
     gravity: -1,
     density: -1,
     moons: -1
+  }
+
+  sat: Saturn = {
+    gravity: -1,
+    density: -1
   }
 
   dtChat: Chat[] = [
@@ -185,14 +190,14 @@ export class ChatComponent implements OnInit, AfterViewChecked {
 
   // SATURNO
   getSaturn(nombrePlanet:string) {
-    this.planetService.getPlanetForName("saturn").subscribe((response) => {
-      this.pl = response
+    this.planetService.getPlanetForNameSaturn("saturn").subscribe((response) => {
+      this.sat = response
       this.dtChat.push(
         {
           type: 1,
           avatar:
             'https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png',
-            message: nombrePlanet +' tiene una densidad de: ' + this.pl.density + ' y una gravedad de: ' + this.pl.gravity + ', como particularidad tiene ' + this.pl.moons + ' lunas.',
+            message: nombrePlanet +' tiene una densidad de: ' + this.sat.density + ' y una gravedad de: ' + this.sat.gravity + ', como particularidad tiene ',
           }
       )
 

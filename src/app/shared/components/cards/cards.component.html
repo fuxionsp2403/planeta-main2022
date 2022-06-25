@@ -1,19 +1,30 @@
-<div class="box">
-  <p class="planet">PLANET</p>
+<!-- <div class="product-card">
+  <div class="badge">Planet</div>
+  <div class="product-tumb" [style]="image">
+
+  </div>
+  <div class="product-details">
+    <span class="product-catagory">Name</span>
+    <h4><a>{{ datos.name }}</a></h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+
+  </div>
+</div>
+ -->
+
+ <div class="box">
+  <p class="planet">PLANETA</p>
   <!--model-->
-  <img src="../../../assets/{{ listCards[valor].nameTitle }}" class="model" />
+  <img src="../../../assets/{{ image }}" class="model" />
   <!--details-->
   <div class="details">
     <!--logo-character-->
-    <img
-      src="../../../assets/{{ listCards[valor].nameImage }}"
-      class="logo"
-      width="100px"
-      style="height: auto"
-    />
+    <h2 style="color:#fff ;">{{ title}}</h2>
     <!--character-details-->
-    <p> 
-      {{ listCards[valor].description }}
-    </p>
+    <p><b>Radio Medio: </b> {{ gravedad }}</p>
+    <p><b>Radio Igual: </b> {{ dimension }}</p>
+    <p><b>Radio polar: </b> {{ escape }}</p>
+
   </div>
 </div>
+

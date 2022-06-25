@@ -11,9 +11,9 @@
   <app-navbar></app-navbar>
   <!-- INICIO DEL MAIN CONTAINER -->
   <div class="main">
-    <div class="container mt-5">
+    <div class="container mt-5" id="faq">
       <div id="carouselExampleCaptions" class="carousel slide p-3 shadow rounded-max" data-bs-ride="carousel"
-      style="background-color: #008b8b;opacity: 0.8;">
+      style="background-color: #1c305c;opacity: 0.9;">
        <!-- style="background-color: RGB(28, 48, 92,0.9);"> -->
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -24,37 +24,37 @@
           <div class="carousel-item active">
             <div class="row row-cols-md-3 g-4">
               <div class="col-md-4">
-                <app-cards [valor]="0"></app-cards> 
+                <app-cards [id]="dtplanet[0].nameTitle" [image]="dtplanet[0].nameImage"></app-cards>
               </div>
               <div class="col-md-4">
-                <app-cards [valor]="1"></app-cards>
+                <app-cards [id]="dtplanet[1].nameTitle" [image]="dtplanet[1].nameImage"></app-cards>
               </div>
               <div class="col-md-4">
-                <app-cards [valor]="2"></app-cards>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row row-cols-md-3 g-4">
-              <app-cards [valor]="3"></app-cards>
-              <div class="col-md-4">
-                <app-cards [valor]="4"></app-cards>
-              </div>
-              <div class="col-md-4">
-                <app-cards [valor]="5"></app-cards>
+                <app-cards [id]="dtplanet[2].nameTitle" [image]="dtplanet[2].nameImage"></app-cards>
               </div>
             </div>
           </div>
           <div class="carousel-item">
             <div class="row row-cols-md-3 g-4">
+              <app-cards [id]="dtplanet[3].nameTitle" [image]="dtplanet[3].nameImage"></app-cards>
               <div class="col-md-4">
-                <app-cards [valor]="6"></app-cards>
+                <app-cards [id]="dtplanet[4].nameTitle" [image]="dtplanet[4].nameImage"></app-cards>
               </div>
               <div class="col-md-4">
-                <app-cards [valor]="7"></app-cards>
+                <app-cards [id]="dtplanet[5].nameTitle" [image]="dtplanet[5].nameImage"></app-cards>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row row-cols-md-3 g-4">
+              <div class="col-md-4">
+                <app-cards [id]="dtplanet[5].nameTitle" [image]="dtplanet[5].nameImage"></app-cards>
               </div>
               <div class="col-md-4">
-                <app-cards [valor]="8"></app-cards>
+                <app-cards [id]="dtplanet[6].nameTitle" [image]="dtplanet[6].nameImage"></app-cards>
+              </div>
+              <div class="col-md-4">
+                <app-cards [id]="dtplanet[7].nameTitle" [image]="dtplanet[7].nameImage"></app-cards>
               </div>
             </div>
           </div>
@@ -70,14 +70,75 @@
       </div>
     </div>
 
-    <div class="container">
-      <div  class="p-3 shadow rounded rounded-max"  style="background-color: #1c305c; margin-top: 70px;">
+    <div class="container" id="faq2">
+      <div  class="p-3 shadow rounded rounded-max"  style="background-color: #1c305c; margin-top: 70px;margin-bottom: 100px !important;">
         <app-boxcontainer></app-boxcontainer>
       </div>
     </div>
 
+    <div class="container " style="padding-bottom:80px" id="faq3">
+      <div  class="p-3 shadow rounded rounded-max mt-5 text-center"  style="display: flex;flex-direction: row; flex-wrap: wrap;justify-content: center;align-items: center;background: url(../../../assets/fondocard.jpg) center / 100% 100%;">
+        <h3 style="color:aliceblue; font-family: 'Courier New', Courier, monospace;font-weight: bold; ">Lo mas visto de la semana</h3><br><br><br>
+        <br>
+        <div class="row" >
+          <div class="col-md-3">
+            <div class="product-card">
+              <div class="product-tumb" style="background: url(../../../assets/investigacion1.jpg) center / 100% 100%;height: 180px;">
+
+              </div>
+              <div class="product-details">
+                <h4><a href="https://www.nasa.gov/" target="_blank">Nuevo Satelites</a></h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card">
+              <div class="product-tumb" style="background: url(../../../assets/investigacion2.jpg) center / 100% 100%;height: 180px;">
+
+              </div>
+              <div class="product-details">
+                <h4><a href="https://www.nasa.gov/" target="_blank"> &nbsp;Robot &nbsp;   Charlie</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card">
+              <div class="product-tumb" style="background: url(../../../assets/investigacion3.jpg) center / 100% 100%;height: 180px;">
+
+              </div>
+              <div class="product-details">
+                <h4><a href="https://www.nasa.gov/" target="_blank">Aterrisaje Espacial</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="product-card">
+              <div class="product-tumb" style="background: url(../../../assets/investigacion4.jpg) center / 100% 100%;height: 180px;">
+
+              </div>
+              <div class="product-details">
+                <h4><a href="https://www.nasa.gov/" target="_blank">Equipo Espacial</a></h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <br><br><br><br><br>
+        </div>
+      </div>
+    </div>
+
      <!-- INICIO DEL FOOTER -->
-  <div class="footer mt-5">
+  <div class="footer mt-5" id="faq4">
     <app-footer></app-footer>
   </div>
   </div>

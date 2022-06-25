@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-boxcontainer',
@@ -20,6 +21,17 @@ export class BoxcontainerComponent implements OnInit {
       this.flatcontainer = true;
     }
 
+  }
+
+  link(){
+    var enlace = [
+      "www.google.com", 
+      "www.sucaricatura.com", 
+      "www.tunait.com",
+      "www.webareyou.com"];
+     let n = Math.floor(Math.random() * enlace.length);
+     window.open(enlace[n], '_blank');
+    
   }
 
 }

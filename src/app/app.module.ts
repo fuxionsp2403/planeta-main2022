@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgParticlesModule } from "ng-particles";
 
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SkeletonComponent } from './layout/skeleton/skeleton.component';
@@ -33,8 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgParticlesModule,
     ReactiveFormsModule,
     InfiniteScrollModule,
-    FontAwesomeModule,    
-    FormsModule,
+    FontAwesomeModule,
     HttpClientModule
   ],
   providers: [],

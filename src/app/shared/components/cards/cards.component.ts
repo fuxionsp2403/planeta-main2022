@@ -26,18 +26,18 @@ export class CardsComponent implements OnInit {
   ngOnInit(): void {
     this.srvplaneta.getnameplaneta(this.id)
     .subscribe((response) => {
-      this.title = this.españolName(this.id);
+      this.title = this.spanishName(this.id);
       this.datos = response;
       this.gravedad =  response.meanRadius;
       this.escape =  response.equaRadius;
       this.dimension = response.polarRadius;
     })
   }
-  españolName(name:string):string {
+  spanishName(name:string):string {
     switch (name) {
       case  "mercury": return "Mercurio";
       case  "venus": return "Venus";
-      case  "earth": return "tierra";
+      case  "earth": return "Tierra";
       case  "mars": return "Marte";
       case  "saturn": return "Saturno";
       case  "uranus": return "Urano";

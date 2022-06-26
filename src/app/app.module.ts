@@ -11,10 +11,11 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { CardsComponent } from './shared/components/cards/cards.component';
 import { ChatComponent } from './shared/components/chat/chat.component';
 import { BoxcontainerComponent } from './shared/components/boxcontainer/boxcontainer.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import  {  InfiniteScrollModule  }  from  "ngx-infinite-scroll" ;
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import  {  InfiniteScrollModule  }  from  "ngx-infinite-scroll" ;
     ReactiveFormsModule,
     InfiniteScrollModule,
     FontAwesomeModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

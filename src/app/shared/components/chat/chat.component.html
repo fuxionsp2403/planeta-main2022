@@ -1,7 +1,7 @@
 <div class="container btn-flotante d-flex justify-content-center" id="div">
   <div class="card mt-5">
     <div class="d-flex flex-row justify-content-between p-3 adiv text-white">
-      <span class="pb-3">Chat Boot</span>
+      <span class="pb-3">Chat Bot</span>
       <div class="buttons">
         <i class="fa fa-minus" routerLink="/chat/3" aria-hidden="true"></i>
         <i class="fa fa-window-maximize" routerLink="/chat/4" aria-hidden="true"></i>
@@ -23,8 +23,8 @@
          <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png" width="30" height="30">
        </div> -->
 
-       <div class="form-group px-3">
-         <textarea class="form-control"(keyup.enter)="emitermessage()" #txtmessage rows="5" placeholder="Type your message"></textarea>
+       <div class="form-group px-1">
+         <textarea class="form-control" style="margin-bottom:5px" (keyup.enter)="emitermessage()" #txtmessage rows="5" placeholder="Agregar Mensaje..."></textarea>
        </div>
     </div>
   </div>

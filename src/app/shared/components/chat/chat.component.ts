@@ -28,11 +28,7 @@ interface Chat {
 export class ChatComponent implements OnInit, AfterViewChecked {
   @ViewChild('txtmessage') messagenviar!: ElementRef<HTMLInputElement>;
   @ViewChild('scrollchat') private myScrollContainer!: ElementRef;
-  //Estado para ocultar el chat
   scrolledToBottom = false;
-  //arreglo de mensages
-  //type = 1 => usuario de sistema chat boot
-  // type =2 => usuario invitado
   planet: Planets[] = [];
   nombrePlanet: string = "";
   densidad: number = 0;
@@ -56,7 +52,7 @@ export class ChatComponent implements OnInit, AfterViewChecked {
       type: 1,
       avatar:
         'https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png',
-      message: 'Ola!!.. me llamo Alexa, en que puedo ayudarte? Escribe cualquiera de estos planetas para probar: Tierra, Marte, Mercurio',
+      message: 'Hola!!.. me llamo Marcia 🤖, ¡Empecemos calentando motores con cualquiera de estos planetas!: Tierra, Marte, Mercurio',
     },
   ];
   /*  constructor(private projectService: ProyectoService, private tokenService: TokenService) { }
